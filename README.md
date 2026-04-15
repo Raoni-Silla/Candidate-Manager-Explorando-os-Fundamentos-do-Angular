@@ -1,27 +1,87 @@
-# DesafioFixacao01
+# 🎯 Sistema de Gerenciamento de Candidatos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.29.
+Este projeto é um mini sistema de RH desenvolvido para fins de aprendizado técnico em **Angular 8**. O objetivo é gerenciar o fluxo de candidatos em um processo seletivo, aplicando conceitos fundamentais de comunicação entre componentes, estados e renderização condicional.
 
-## Development server
+## 👤 Autor
+- **Usuário:** raoni-silla
+- **Versão do Angular:** 8.3.29
+- **Node:** 12.22.12
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## 📋 Funcionalidades Principais
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+O sistema contempla as seguintes operações:
 
-## Build
+1.  **Adição de Candidatos:**
+    * Input de texto e botão para cadastro.
+    * Regra de validação: Proibido nomes vazios.
+    * Desafio: Verificação de nomes duplicados na lista.
+2.  **Listagem Dinâmica:**
+    * Exibição de candidatos em formato de "Cards".
+    * Arquitetura de componentes: Lista (Pai) e Card (Filho).
+3.  **Gestão de Status:**
+    * Todo candidato inicia como "Em análise".
+    * Botão para Aprovar (muda status visualmente).
+    * Bloqueio de ação: Candidatos aprovados têm o botão de aprovação desativado.
+4.  **Remoção:**
+    * Exclusão de candidatos da lista através de eventos disparados pelo card.
+5.  **Filtros Avançados:**
+    * Visualização de "Todos" os candidatos.
+    * Visualização filtrada apenas por "Aprovados".
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+---
 
-## Running unit tests
+## 🧠 Conceitos Angular Aplicados
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Para a construção deste projeto "Modo Raiz", foram explorados:
 
-## Running end-to-end tests
+- **Input/Output Decorators:** Comunicação para o filho avisar o pai sobre deleções ou aprovações.
+- **Diretivas Estruturais:** `*ngFor` para listas e `*ngIf` para renderização condicional de status e mensagens.
+- **Data Binding:** Utilização de `[(ngModel)]` para formulários e `(click)` para eventos.
+- **Pipes/Logic:** Filtros de array em TypeScript para manipulação da exibição.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+---
 
-## Further help
+## 🛠️ Tecnologias Utilizadas
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```text
+     / \   _ __   __ _ _   _| | __ _ _ __      / ___| |   |_ _|
+    / △ \ | '_ \ / _` | | | | |/ _` | '__|    | |   | |    | |
+   / ___ \| | | | (_| | |_| | | (_| | |       | |___| |___ | |
+  /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|        \____|_____|___|
+                 |___/
+
+Angular CLI: 8.3.29
+Node: 12.22.12
+OS: linux x64
+RxJS: 6.4.0
+```
+
+---
+
+## 🚀 Como rodar o projeto
+
+1.  Certifique-se de estar usando o **Node 12**.
+2.  Instale as dependências:
+    ```bash
+    npm install
+    ```
+3.  Inicie o servidor de desenvolvimento:
+    ```bash
+    ng serve
+    ```
+4.  Acesse `http://localhost:4200/` no seu navegador.
+
+---
+
+## 🧩 Desafios Implementados (Extra)
+
+- [x] Mensagem de "Nenhum candidato cadastrado" quando a lista está vazia.
+- [x] Contador dinâmico de candidatos aprovados.
+- [x] Estilização diferenciada para candidatos aprovados.
+- [x] Edição de nomes de candidatos já existentes.
+
+---
+
+> **Regra de Ouro:** "O que eu já sei que pode resolver isso?" - Foco na resolução de problemas e entendimento real da ferramenta.
