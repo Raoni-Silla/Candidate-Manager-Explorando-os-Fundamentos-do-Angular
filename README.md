@@ -46,7 +46,7 @@ Construir este projeto "modo raiz" me permitiu dominar conceitos que são a base
 
 1. **Clonar o repositório:**
    ```bash
-   git clone [https://github.com/raoni-silla/nome-do-repositorio.git](https://github.com/raoni-silla/nome-do-repositorio.git)
+   git clone [https://github.com/Raoni-Silla/Candidate-Manager-Explorando-os-Fundamentos-do-Angular](https://github.com/https://github.com/Raoni-Silla/Candidate-Manager-Explorando-os-Fundamentos-do-Angular)
    ```
 
 2. **Instalar dependências (Node 12):**
